@@ -51,6 +51,9 @@ def main():
     print("Welcome to the Personalized Fitness Tracker!")
     name = input("Enter your name: ")
     sex  = input("Enter you sex (male or female): ").strip().lower()
+    while sex not in ["male", "female"]:
+        print("Invalid sex option. Please choose from male or female.")
+        sex  = input("Enter you sex (male or female): ").strip().lower()
     age = get_positive_number("Enter your age: ")
     weight = get_positive_number("Enter your weight (kg): ")
     height = get_positive_number("Enter your height (cm):  ")
