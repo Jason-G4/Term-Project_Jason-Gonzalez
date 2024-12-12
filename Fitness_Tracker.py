@@ -62,7 +62,7 @@ def main():
 
     print("Activity Levels: sedentary, lightly active, moderately active, very active")
     activity_level = input("Enter you activity level: ").strip().lower()
-    while activity_level not in ["sedentary", "lighly active", "moderately active", "very active"]:
+    while activity_level not in ["sedentary", "lightly active", "moderately active", "very active"]:
         print("Invalid activity level. Please choose from sedentary, lightly active, moderately active, very active.")
         activity_level = input("Enter you activity level: ").strip().lower()
 
