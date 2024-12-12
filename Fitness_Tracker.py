@@ -51,17 +51,19 @@ def main():
     print("Welcome to the Personalized Fitness Tracker!")
     name = input("Enter your name: ")
     sex  = input("Enter you sex (male or female): ").strip().lower()
+
     while sex not in ["male", "female"]:
         print("Invalid sex option. Please choose from male or female.")
         sex  = input("Enter you sex (male or female): ").strip().lower()
+
     age = get_positive_number("Enter your age: ")
     weight = get_positive_number("Enter your weight (kg): ")
-    height = get_positive_number("Enter your height (cm):  ")
+    height = get_positive_number("Enter your height (cm): ")
 
-    print("Activity Levels: sedentary, lighly active, moderately active, very active")
+    print("Activity Levels: sedentary, lightly active, moderately active, very active")
     activity_level = input("Enter you activity level: ").strip().lower()
     while activity_level not in ["sedentary", "lighly active", "moderately active", "very active"]:
-        print("Invalid activity level. Please choose from sedentary, lighly active, moderately active, very active.")
+        print("Invalid activity level. Please choose from sedentary, lightly active, moderately active, very active.")
         activity_level = input("Enter you activity level: ").strip().lower()
 
     user = User(name, age, weight, height, sex, activity_level)
