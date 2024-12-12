@@ -47,6 +47,8 @@ def log_daily_activity():
     water_intake = get_positive_number("Enter the litres of water you drank today: ")
     return DayLog(steps, calories_burned, water_intake)
 
+
+#main
 def main():
     print("Welcome to the Personalized Fitness Tracker!")
     name = input("Enter your name: ")
@@ -68,7 +70,7 @@ def main():
 
     user = User(name, age, weight, height, sex, activity_level)
     daily_calories = user.calculate_bmr()
-    print(f"\n{name}, your daily calorie requirement is approximately {daily_calories:.2f} calories.\n")
+    print(f"\n{name}, your daily calorie requirement is approximately {daily_calories:.0f} calories.\n")
 
     #Track daily progress 
     logs = []
@@ -99,6 +101,7 @@ def main():
             break
         else:
             print("Invalid choice. Please try again.")
+
 
 if __name__ == '__main__':
     main()
